@@ -1,6 +1,8 @@
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { HardHat, Paintbrush, Wrench } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const services = [
   {
@@ -20,7 +22,7 @@ const services = [
   },
 ];
 
-export function ServicesSection() {
+export function ServicesSection({ showMoreLink = false }: { showMoreLink?: boolean }) {
   return (
     <section id="services" className="w-full py-12 md:py-16">
       <div className="container mx-auto px-4 md:px-6">
@@ -31,7 +33,7 @@ export function ServicesSection() {
             We provide a wide range of construction services to meet the diverse needs of our clients.
           </p>
         </div>
-        <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 lg:max-w-none mt-12">
+        <div className="mx-auto mt-12 grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 lg:max-w-none">
           {services.map((service) => (
             <Card key={service.title} className="transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl">
               <CardHeader className="items-center text-center">
@@ -42,6 +44,13 @@ export function ServicesSection() {
             </Card>
           ))}
         </div>
+        {showMoreLink && (
+          <div className="mt-12 flex justify-center">
+            <Button asChild size="lg" variant="outline">
+              <Link href="/services">Look more</Link>
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
