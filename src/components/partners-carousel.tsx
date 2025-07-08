@@ -14,7 +14,7 @@ export function PartnersCarousel() {
         <div 
           className="w-full flex flex-nowrap overflow-hidden [mask-image:_linear_gradient(to_right,transparent_0,_black_8rem,_black_calc(100%-8rem),transparent_100%)]"
         >
-          <ul className="flex items-center justify-center md:justify-start [&_li]:mx-20 animate-scroll">
+          <ul className="flex shrink-0 items-center justify-center md:justify-start [&_li]:mx-20 animate-scroll">
             {logos.map((logo, index) => (
               <li key={index}>
                 <Image
@@ -28,7 +28,7 @@ export function PartnersCarousel() {
               </li>
             ))}
           </ul>
-          <ul className="flex items-center justify-center md:justify-start [&_li]:mx-20 animate-scroll" aria-hidden="true">
+          <ul className="flex shrink-0 items-center justify-center md:justify-start [&_li]:mx-20 animate-scroll" aria-hidden="true">
              {logos.map((logo, index) => (
               <li key={index}>
                 <Image
