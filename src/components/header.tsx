@@ -4,37 +4,49 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 import { useEffect, useState } from 'react';
-
-const navLinks = [
-  { href: '#services', label: 'Services' },
-  { href: '#works', label: 'Our Works' },
-  { href: '#about', label: 'About Us' },
-  { href: '#contact', label: 'Contact' },
-];
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 
 export function Header() {
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    if (isHomePage) {
+      const handleScroll = () => {
+        setIsScrolled(window.scrollY > 10);
+      };
+      handleScroll();
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+    } else {
+      setIsScrolled(true);
+    }
+  }, [isHomePage]);
+
+  const navLinks = [
+    { href: isHomePage ? '#services' : '/#services', label: 'Services' },
+    { href: '/works', label: 'Our Works' },
+    { href: isHomePage ? '#about' : '/#about', label: 'About Us' },
+    { href: '/contact', label: 'Contact' },
+  ];
 
   const navContent = (
     <>
       {navLinks.map((link) => (
-        <a
+        <Link
           key={link.href}
           href={link.href}
           className="text-sm font-medium transition-colors hover:text-primary"
         >
           {link.label}
-        </a>
+        </Link>
       ))}
-      <Button>Get a Quote</Button>
+      <Button asChild>
+        <Link href="/contact">Get a Quote</Link>
+      </Button>
     </>
   );
 

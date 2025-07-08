@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export function HeroSection() {
   return (
@@ -39,8 +40,8 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
             className="mt-8"
           >
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Explore Our Work
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+              <Link href="/works">Explore Our Work</Link>
             </Button>
           </motion.div>
         </div>

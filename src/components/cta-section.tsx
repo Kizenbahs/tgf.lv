@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export function CtaSection() {
   return (
@@ -11,7 +12,9 @@ export function CtaSection() {
           <p className="text-muted-foreground md:text-xl">
             Let's build something amazing together. Contact us for a free consultation and quote.
           </p>
-          <Button size="lg">Get a Quote</Button>
+          <Button size="lg" asChild>
+            <Link href="/contact">Get a Quote</Link>
+          </Button>
         </div>
       </div>
     </section>
