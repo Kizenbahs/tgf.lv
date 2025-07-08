@@ -1,11 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter, Space_Grotesk } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
 
-const fontBody = Inter({ subsets: ["latin"], variable: "--font-body" });
-const fontHeadline = Space_Grotesk({ subsets: ["latin"], variable: "--font-headline" });
+const font = DM_Sans({ subsets: ["latin"], variable: "--font-body" });
 
 export const metadata: Metadata = {
   title: 'ConstructPro',
@@ -21,8 +20,7 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <body className={cn(
         "font-body antialiased",
-        fontBody.variable,
-        fontHeadline.variable
+        font.variable
       )}>
         {children}
         <Toaster />
