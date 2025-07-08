@@ -1,36 +1,32 @@
 import Image from 'next/image';
-import { Card, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 
 const projects = [
   {
     image: "https://placehold.co/600x400.png",
     hint: "modern building",
     title: "Modern Villa",
-    description: "A luxury villa with a minimalist design and sustainable features.",
   },
   {
     image: "https://placehold.co/600x400.png",
     hint: "commercial skyscraper",
     title: "Skyscraper HQ",
-    description: "Corporate headquarters featuring state-of-the-art facilities and a striking facade.",
   },
   {
     image: "https://placehold.co/600x400.png",
     hint: "bridge architecture",
     title: "Suspension Bridge",
-    description: "An engineering marvel connecting two major cities over a wide river.",
   },
    {
     image: "https://placehold.co/600x400.png",
     hint: "interior design",
     title: "Loft Renovation",
-    description: "Transforming an industrial loft into a stunning, modern living space.",
   },
 ];
 
 export function OurWorksSection() {
   return (
-    <section id="works" className="w-full py-12 md:py-24 lg:py-32 bg-muted/40">
+    <section id="works" className="w-full py-12 md:py-16 lg:py-20 bg-muted/40">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
@@ -54,7 +50,6 @@ export function OurWorksSection() {
                 />
               <CardHeader>
                 <CardTitle className="font-headline">{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
               </CardHeader>
             </Card>
           ))}
