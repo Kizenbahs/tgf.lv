@@ -3,11 +3,11 @@ import { Badge } from '@/components/ui/badge';
 
 export function AboutUsSection() {
   return (
-    <section id="about" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="about" className="w-full py-12 md:py-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-4">
-             <Badge variant="secondary">About Us</Badge>
+             <Badge variant="default">About Us</Badge>
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
               Building the Future, Restoring the Past
             </h2>

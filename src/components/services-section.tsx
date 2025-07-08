@@ -22,16 +22,14 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="services" className="w-full py-12 md:py-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <div className="space-y-2">
-            <Badge variant="secondary">Our Services</Badge>
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What We Offer</h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              We provide a wide range of construction services to meet the diverse needs of our clients.
-            </p>
-          </div>
+          <Badge variant="default">Our Services</Badge>
+          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What We Offer</h2>
+          <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            We provide a wide range of construction services to meet the diverse needs of our clients.
+          </p>
         </div>
         <div className="mx-auto grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 lg:max-w-none mt-12">
           {services.map((service) => (
