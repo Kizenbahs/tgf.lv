@@ -1,7 +1,10 @@
+import { AboutUsSection } from "@/components/about-us-section";
+import { CtaSection } from "@/components/cta-section";
+import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { HeroSection } from "@/components/hero-section";
+import { OurWorksSection } from "@/components/our-works-section";
 import { ServicesSection } from "@/components/services-section";
-import { Footer } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -10,6 +13,9 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <ServicesSection />
+        <OurWorksSection />
+        <AboutUsSection />
+        <CtaSection />
       </main>
       <Footer />
     </div>
