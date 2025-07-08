@@ -1,5 +1,6 @@
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { HardHat, Paintbrush, Wrench } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
 
 const services = [
   {
@@ -21,11 +22,11 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="w-full py-12 md:py-16 lg:py-20">
+    <section id="services" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
-            <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Services</div>
+            <Badge variant="secondary">Our Services</Badge>
             <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What We Offer</h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               We provide a wide range of construction services to meet the diverse needs of our clients.
