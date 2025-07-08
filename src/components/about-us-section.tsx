@@ -10,6 +10,9 @@ export function AboutUsSection() {
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
             Building the Future, Restoring the Past
           </h2>
+          <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            Discover the story behind our success and the values that drive our work.
+          </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-5xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-4 text-left">
