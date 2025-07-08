@@ -1,7 +1,9 @@
 import Image from 'next/image';
 
+const guliverLogoSvg = `data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMjUwIDEwMCI+PGcgc3R5bGU9ImZvbnQtZmFtaWx5OiBzYW5zLXNlcmlmOyBmaWxsOiAjODg4OyI+PHRleHQgeD0iNTAlIiB5PSI0NSUiIHN0eWxlPSJmb250LXNpemU6IDMycHg7IGZvbnQtd2VpZ2h0OiBib2xkOyB0ZXh0LWFuY2hvcjogbWlkZGxlOyBkb21pbmFudC1iYXNlbGluZTogbWlkZGxlOyI+R1VMSVZFUjwvdGV4dD48dGV4dCB4PSI1MCUiIHk9IjcwJSIgc3R5bGU9ImZvbnQtc2l6ZTogMTZweDsgdGV4dC1hbmNob3I6IG1pZGRsZTsgZG9taW5hbnQtYmFzZWxpbmU6IG1pZGRsZTsiPmLDk3ZuawSBYw6xYmE8L3RleHQ+PC9nPjwvc3ZnPg==`;
+
 const logos = [
-  { src: "https://placehold.co/250x100.png", alt: "Guliver Construction", hint: "construction logo" },
+  { src: guliverLogoSvg, alt: "Guliver Construction", hint: "construction logo" },
   { src: "https://placehold.co/250x100.png", alt: "Partner Logo 2", hint: "company logo" },
   { src: "https://placehold.co/250x100.png", alt: "Partner Logo 3", hint: "company logo" },
   { src: "https://placehold.co/250x100.png", alt: "Partner Logo 4", hint: "company logo" },
