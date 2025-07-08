@@ -27,7 +27,7 @@ export function Header() {
   }, [isHomePage]);
 
   const navLinks = [
-    { href: isHomePage ? '#services' : '/#services', label: 'Services' },
+    { href: '/services', label: 'Services' },
     { href: '/works', label: 'Our Works' },
     { href: '/about', label: 'About Us' },
     { href: '/contact', label: 'Contact' },
