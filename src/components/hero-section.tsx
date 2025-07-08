@@ -32,7 +32,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             className="mx-auto mt-4 max-w-[700px] text-lg text-gray-200 md:text-xl"
           >
-            From concept to creation, ConstructPro delivers excellence and precision in every project.
+            From concept to creation, TGF Build delivers excellence and precision in every project.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

@@ -7,8 +7,8 @@ import { cn } from "@/lib/utils";
 const font = DM_Sans({ subsets: ["latin"], variable: "--font-body" });
 
 export const metadata: Metadata = {
-  title: 'ConstructPro',
-  description: 'Modern solutions for your construction needs.',
+  title: 'TGF Build',
+  description: 'Elektromontāža un būvniecība',
 };
 
 export default function RootLayout({
