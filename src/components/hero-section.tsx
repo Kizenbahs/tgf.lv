@@ -10,9 +10,8 @@ export function HeroSection() {
       <Image
         src="https://placehold.co/1920x1080.png"
         alt="Construction site background"
-        layout="fill"
-        objectFit="cover"
-        className="brightness-50"
+        fill
+        className="object-cover brightness-50"
         data-ai-hint="construction architecture"
         priority
       />
