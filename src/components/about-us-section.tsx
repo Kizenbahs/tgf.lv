@@ -5,16 +5,18 @@ export function AboutUsSection() {
   return (
     <section id="about" className="w-full py-12 md:py-16">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-          <div className="space-y-4">
-             <Badge variant="default">About Us</Badge>
-            <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Building the Future, Restoring the Past
-            </h2>
-            <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <Badge variant="default">About Us</Badge>
+          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">
+            Building the Future, Restoring the Past
+          </h2>
+        </div>
+        <div className="mx-auto mt-12 grid max-w-5xl items-center gap-10 lg:grid-cols-2 lg:gap-16">
+          <div className="space-y-4 text-left">
+            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               ConstructPro has been a leader in the construction industry for over two decades. Our commitment to quality, safety, and innovation has made us a trusted partner for clients on projects of all scales. We believe in building strong relationships with our clients, based on transparency and mutual respect.
             </p>
-            <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
               Our team of experienced professionals is dedicated to delivering projects on time and within budget, without compromising on the quality of our work. We use the latest technology and sustainable practices to create buildings that are not only beautiful but also durable and environmentally friendly.
             </p>
           </div>
