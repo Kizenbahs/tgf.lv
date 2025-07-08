@@ -18,31 +18,6 @@ export function ContactSection() {
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
-          <div>
-            <form className="grid gap-6">
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" placeholder="Enter your name" />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="Enter your email" />
-                </div>
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" placeholder="What is this about?" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
-                <Textarea id="message" placeholder="Enter your message" className="min-h-[150px]" />
-              </div>
-              <Button type="submit" size="lg" className="w-full">
-                Send Message
-              </Button>
-            </form>
-          </div>
           <div className="space-y-6 text-muted-foreground">
             <div>
               <h3 className="text-xl font-bold text-foreground">Address</h3>
@@ -85,6 +60,31 @@ export function ContactSection() {
               <p>Pr. – Pt. 9:00 – 18:00</p>
               <p>Avārijas seku novēršana – serviss 24/7</p>
             </div>
+          </div>
+          <div>
+            <form className="grid gap-6">
+              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Name</Label>
+                  <Input id="name" placeholder="Enter your name" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input id="email" type="email" placeholder="Enter your email" />
+                </div>
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="subject">Subject</Label>
+                <Input id="subject" placeholder="What is this about?" />
+              </div>
+              <div className="space-y-2">
+                <Label htmlFor="message">Message</Label>
+                <Textarea id="message" placeholder="Enter your message" className="min-h-[150px]" />
+              </div>
+              <Button type="submit" size="lg" className="w-full">
+                Send Message
+              </Button>
+            </form>
           </div>
         </div>
       </div>
