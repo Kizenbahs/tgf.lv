@@ -72,6 +72,19 @@ export function ContactSection() {
                 </div>
               </div>
             </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground">Company Details</h3>
+              <p>Reģistrācijas Nr. – LV40103906156</p>
+              <p>Faktiskā adrese – Krišjāņa Barona 136E, LV-1012, Rīga</p>
+              <p>Juridiskā adrese – Biķernieku iela 29-19, LV-1039, Rīga</p>
+              <p>Banka: Luminor Bank AS Latvijas filiāle, RIKOLV2X</p>
+              <p>Konts: LV37RIKO0002930203957</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground">Working Hours</h3>
+              <p>Pr. – Pt. 9:00 – 18:00</p>
+              <p>Avārijas seku novēršana – serviss 24/7</p>
+            </div>
           </div>
         </div>
       </div>
