@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const logos = [
-  { src: "https://placehold.co/250x100.png", alt: "Partner Logo 1", hint: "company logo" },
+  { src: "https://placehold.co/250x100.png", alt: "Guliver Construction", hint: "construction logo" },
   { src: "https://placehold.co/250x100.png", alt: "Partner Logo 2", hint: "company logo" },
   { src: "https://placehold.co/250x100.png", alt: "Partner Logo 3", hint: "company logo" },
   { src: "https://placehold.co/250x100.png", alt: "Partner Logo 4", hint: "company logo" },
