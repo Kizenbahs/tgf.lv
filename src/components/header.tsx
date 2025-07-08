@@ -44,9 +44,6 @@ export function Header() {
           {link.label}
         </Link>
       ))}
-      <Button asChild>
-        <Link href="/contact">Get a Quote</Link>
-      </Button>
     </>
   );
 
