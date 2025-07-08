@@ -29,7 +29,7 @@ export function Header() {
   const navLinks = [
     { href: isHomePage ? '#services' : '/#services', label: 'Services' },
     { href: '/works', label: 'Our Works' },
-    { href: isHomePage ? '#about' : '/#about', label: 'About Us' },
+    { href: '/about', label: 'About Us' },
     { href: '/contact', label: 'Contact' },
   ];
 

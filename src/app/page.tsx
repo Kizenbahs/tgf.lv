@@ -1,4 +1,3 @@
-import { AboutUsSection } from "@/components/about-us-section";
 import { CtaSection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
@@ -12,7 +11,6 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <ServicesSection />
-        <AboutUsSection />
         <CtaSection />
       </main>
       <Footer />
