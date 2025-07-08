@@ -61,7 +61,7 @@ export function ContactSection() {
               <p>Avārijas seku novēršana – serviss 24/7</p>
             </div>
           </div>
-          <div>
+          <div className="rounded-lg bg-secondary p-8 shadow-lg">
             <form className="grid gap-6">
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="space-y-2">
