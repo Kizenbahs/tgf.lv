@@ -14,14 +14,14 @@ export function ContactSection() {
             Get in Touch
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Have a project in mind or just want to say hello? We&apos;d love to hear from you.
+            Have a project in mind or just want to say hello? We&apos;d love to hear from you!
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
           <div className="space-y-6 text-muted-foreground">
             <div>
               <h3 className="text-xl font-bold text-foreground">Address</h3>
-              <p>Riga, Krišjāņa Barona ielā 136e, LV-1012</p>
+              <p>Krišjāņa Barona Street 136e, Riga, LV-1012</p>
             </div>
             <div>
               <h3 className="text-xl font-bold text-foreground">General Inquiries</h3>
@@ -32,33 +32,33 @@ export function ContactSection() {
               <div className="mt-2 space-y-4">
                 <div>
                   <p className="font-semibold text-foreground">Filips Pērkons</p>
-                  <p>T: 29328337</p>
+                  <p>T: 29 328 337</p>
                   <p>E: filips@tgf.lv</p>
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Eduards Antipovs</p>
-                  <p>T: 29992269</p>
+                  <p>T: 29 992 269</p>
                   <p>E: eduards@tgf.lv</p>
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Ruslans</p>
-                  <p>T: 22176883</p>
+                  <p>T: 22 176 883</p>
                   <p>E: ruslans@tgf.lv</p>
                 </div>
               </div>
             </div>
             <div>
               <h3 className="text-xl font-bold text-foreground">Company Details</h3>
-              <p>Reģistrācijas Nr. – LV40103906156</p>
-              <p>Faktiskā adrese – Krišjāņa Barona 136E, LV-1012, Rīga</p>
-              <p>Juridiskā adrese – Biķernieku iela 29-19, LV-1039, Rīga</p>
-              <p>Banka: Luminor Bank AS Latvijas filiāle, RIKOLV2X</p>
-              <p>Konts: LV37RIKO0002930203957</p>
+              <p>Registration No. – LV40103906156</p>
+              <p>Physical address – Krišjāņa Barona 136E, LV-1012, Riga</p>
+              <p>Legal address – Biķernieku Street 29-19, LV-1039, Riga</p>
+              <p>Bank: Luminor Bank AS Latvian Branch, RIKOLV2X</p>
+              <p>Account: LV37RIKO0002930203957</p>
             </div>
             <div>
               <h3 className="text-xl font-bold text-foreground">Working Hours</h3>
-              <p>Pr. – Pt. 9:00 – 18:00</p>
-              <p>Avārijas seku novēršana – serviss 24/7</p>
+              <p>Mon. – Fri. 9:00 – 18:00</p>
+              <p>Emergency service 24/7: +371 29 328 337</p>
             </div>
           </div>
           <div className="rounded-lg bg-secondary p-8 shadow-lg">
