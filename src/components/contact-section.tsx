@@ -10,6 +10,7 @@ import { useRef, useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { useToast } from '@/hooks/use-toast';
 import { Progress } from '@/components/ui/progress';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export function ContactSection() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -17,6 +18,7 @@ export function ContactSection() {
   const [invalid, setInvalid] = useState<{[key: string]: boolean}>({});
   const [sending, setSending] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [captcha, setCaptcha] = useState<string | null>(null);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -163,7 +165,14 @@ export function ContactSection() {
                 <Label htmlFor="message">Message</Label>
                 <Textarea id="message" name="message" placeholder="Enter your message" className={`min-h-[150px]${invalid.message ? ' border-red-500' : ''}`} onChange={handleInput} />
               </div>
-              <Button type="submit" size="lg" className="w-full flex items-center justify-center gap-2" disabled={sending}>
+              <div className="space-y-2">
+                <ReCAPTCHA
+                  sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                  onChange={(value: string | null) => setCaptcha(value)}
+                  className="mb-4"
+                />
+              </div>
+              <Button type="submit" size="lg" className="w-full flex items-center justify-center gap-2" disabled={sending || !captcha}>
                 {sending ? (
                   <span className="flex items-center gap-2">
                     Sending
