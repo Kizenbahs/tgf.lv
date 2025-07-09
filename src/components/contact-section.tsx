@@ -10,14 +10,41 @@ import { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { useToast } from '@/hooks/use-toast';
 import { Progress } from '@/components/ui/progress';
+import { useState } from 'react';
 
 export function ContactSection() {
   const formRef = useRef<HTMLFormElement>(null);
   const { toast } = useToast();
+  const [invalid, setInvalid] = useState<{[key: string]: boolean}>({});
+
+  const handleInput = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    if (invalid[e.target.name]) {
+      setInvalid((prev) => ({ ...prev, [e.target.name]: false }));
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!formRef.current) return;
+    const formData = new FormData(formRef.current);
+    const name = formData.get('name')?.toString().trim();
+    const email = formData.get('email')?.toString().trim();
+    const subject = formData.get('subject')?.toString().trim();
+    const message = formData.get('message')?.toString().trim();
+    const newInvalid: {[key: string]: boolean} = {};
+    if (!name) newInvalid.name = true;
+    if (!email) newInvalid.email = true;
+    if (!subject) newInvalid.subject = true;
+    if (!message) newInvalid.message = true;
+    setInvalid(newInvalid);
+    if (Object.keys(newInvalid).length > 0) {
+      toast({
+        title: 'Please fill in all fields.',
+        className: 'border-red-500',
+        duration: 3000,
+      });
+      return;
+    }
     try {
       await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
@@ -107,20 +134,20 @@ export function ContactSection() {
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
-                  <Input id="name" name="name" placeholder="Enter your name" />
+                  <Input id="name" name="name" placeholder="Enter your name" onChange={handleInput} className={invalid.name ? 'border-red-500' : ''} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" name="email" type="email" placeholder="Enter your email" />
+                  <Input id="email" name="email" type="email" placeholder="Enter your email" onChange={handleInput} className={invalid.email ? 'border-red-500' : ''} />
                 </div>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" name="subject" placeholder="Have something to say?" />
+                <Input id="subject" name="subject" placeholder="Have something to say?" onChange={handleInput} className={invalid.subject ? 'border-red-500' : ''} />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="message">Message</Label>
-                <Textarea id="message" name="message" placeholder="Enter your message" className="min-h-[150px]" />
+                <Textarea id="message" name="message" placeholder="Enter your message" className={`min-h-[150px]${invalid.message ? ' border-red-500' : ''}`} onChange={handleInput} />
               </div>
               <Button type="submit" size="lg" className="w-full flex items-center justify-center gap-2">
                 SEND
