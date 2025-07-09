@@ -8,9 +8,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight } from 'lucide-react';
 import { useRef } from 'react';
 import emailjs from 'emailjs-com';
+import { useToast } from '@/hooks/use-toast';
+import { Progress } from '@/components/ui/progress';
 
 export function ContactSection() {
   const formRef = useRef<HTMLFormElement>(null);
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,10 +25,25 @@ export function ContactSection() {
         formRef.current!,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
-      alert('Message sent successfully!');
+      toast({
+        title: 'Email sent!',
+        description: (
+          <div>
+            <span>Your message was sent successfully.</span>
+            <Progress value={100} className="mt-2 h-1 bg-green-500" style={{ transition: 'width 3s linear' }} />
+          </div>
+        ),
+        className: 'border-green-500',
+        duration: 3000,
+      });
       formRef.current.reset();
     } catch (error) {
-      alert('Failed to send message. Please try again later.');
+      toast({
+        title: 'Error',
+        description: 'Failed to send message. Please try again later.',
+        className: 'border-red-500',
+        duration: 3000,
+      });
     }
   };
 
