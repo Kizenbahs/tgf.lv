@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { HardHat, Paintbrush, Wrench } from 'lucide-react';
+import { HardHat, Paintbrush, Wrench, ArrowRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -47,7 +47,10 @@ export function ServicesSection({ showMoreLink = false }: { showMoreLink?: boole
         {showMoreLink && (
           <div className="mt-12 flex justify-center">
             <Button asChild size="lg" className="bg-gray-300 text-gray-700 hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-300">
-              <Link href="/services">FIND MORE</Link>
+              <Link href="/services" className="flex items-center gap-2">
+                FIND MORE
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </Button>
           </div>
         )}

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import { ArrowRight } from 'lucide-react';
 
 export function ContactSection() {
   return (
@@ -74,14 +75,15 @@ export function ContactSection() {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" placeholder="What is this about?" />
+                <Input id="subject" placeholder="Have something to say?" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="message">Message</Label>
                 <Textarea id="message" placeholder="Enter your message" className="min-h-[150px]" />
               </div>
-              <Button type="submit" size="lg" className="w-full">
-                Send Message
+              <Button type="submit" size="lg" className="w-full flex items-center justify-center gap-2">
+                SEND
+                <ArrowRight className="h-4 w-4" />
               </Button>
             </form>
           </div>

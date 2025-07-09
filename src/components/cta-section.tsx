@@ -1,6 +1,7 @@
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 export function CtaSection() {
   return (
@@ -15,7 +16,10 @@ export function CtaSection() {
             Let's build something amazing together. Contact us for a free consultation and quote.
           </p>
           <Button size="lg" asChild>
-            <Link href="/contact">Get a Quote</Link>
+            <Link href="/contact" className="flex items-center gap-2">
+              Get a Quote
+              <ArrowRight className="h-4 w-4" />
+            </Link>
           </Button>
         </div>
       </div>
