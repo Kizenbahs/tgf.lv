@@ -9,15 +9,15 @@ const font = DM_Sans({ subsets: ["latin"], variable: "--font-body" });
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.tgf-build.lv'),
   title: {
-    default: 'TGF Build | Elektromontāža un Būvniecība',
+    default: 'TGF Build | Electrical Installation and Construction',
     template: `%s | TGF Build`,
   },
-  description: 'Vadošais uzņēmums elektromontāžas un vispārējās būvniecības jomā. Piedāvājam pilna cikla pakalpojumus no projektēšanas līdz objekta nodošanai ekspluatācijā.',
-  keywords: ['elektromontāža', 'būvniecība', 'celtniecība', 'renovācija', 'ģenerāluzņēmējs', 'Rīga', 'Latvija', 'TGF Build'],
+  description: 'Leading company in electrical installation and general construction. We offer full-cycle services from project design to commissioning.',
+  keywords: ['electrical installation', 'construction', 'building', 'renovation', 'general contractor', 'Riga', 'Latvia', 'TGF Build'],
   authors: [{ name: 'TGF Build' }],
   openGraph: {
-    title: 'TGF Build | Elektromontāža un Būvniecība',
-    description: 'Vadošais uzņēmums elektromontāžas un vispārējās būvniecības jomā.',
+    title: 'TGF Build | Electrical Installation and Construction',
+    description: 'Leading company in electrical installation and general construction.',
     url: 'https://www.tgf-build.lv',
     siteName: 'TGF Build',
     images: [
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
         alt: 'TGF Build Construction Site',
       },
     ],
-    locale: 'lv_LV',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TGF Build | Elektromontāža un Būvniecība',
-    description: 'Vadošais uzņēmums elektromontāžas un vispārējās būvniecības jomā.',
+    title: 'TGF Build | Electrical Installation and Construction',
+    description: 'Leading company in electrical installation and general construction.',
     images: ['https://placehold.co/1200x630.png'],
   },
   robots: {

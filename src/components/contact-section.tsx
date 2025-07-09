@@ -4,8 +4,29 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight } from 'lucide-react';
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
 
 export function ContactSection() {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!formRef.current) return;
+    try {
+      await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formRef.current!,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+      );
+      alert('Message sent successfully!');
+      formRef.current.reset();
+    } catch (error) {
+      alert('Failed to send message. Please try again later.');
+    }
+  };
+
   return (
     <section className="w-full py-12 md:py-16">
       <div className="container mx-auto px-4 md:px-6">
@@ -62,24 +83,24 @@ export function ContactSection() {
             </div>
           </div>
           <div className="rounded-lg bg-secondary p-8 shadow-lg">
-            <form className="grid gap-6">
+            <form ref={formRef} className="grid gap-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="space-y-2">
                   <Label htmlFor="name">Name</Label>
-                  <Input id="name" placeholder="Enter your name" />
+                  <Input id="name" name="name" placeholder="Enter your name" />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="email">Email</Label>
-                  <Input id="email" type="email" placeholder="Enter your email" />
+                  <Input id="email" name="email" type="email" placeholder="Enter your email" />
                 </div>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" placeholder="Have something to say?" />
+                <Input id="subject" name="subject" placeholder="Have something to say?" />
               </div>
               <div className="space-y-2">
                 <Label htmlFor="message">Message</Label>
-                <Textarea id="message" placeholder="Enter your message" className="min-h-[150px]" />
+                <Textarea id="message" name="message" placeholder="Enter your message" className="min-h-[150px]" />
               </div>
               <Button type="submit" size="lg" className="w-full flex items-center justify-center gap-2">
                 SEND
