@@ -4,24 +4,40 @@ import { Badge } from '@/components/ui/badge';
 
 const projects = [
   {
-    image: "https://placehold.co/600x400.png",
+    image: "/images/work-01.png",
     hint: "modern building",
     title: "Modern Villa",
   },
   {
-    image: "https://placehold.co/600x400.png",
+    image: "/images/work-02.png",
     hint: "commercial skyscraper",
     title: "Skyscraper HQ",
   },
   {
-    image: "https://placehold.co/600x400.png",
+    image: "/images/work-03.png",
     hint: "bridge architecture",
     title: "Suspension Bridge",
   },
-   {
-    image: "https://placehold.co/600x400.png",
+  {
+    image: "/images/work-04.png",
     hint: "interior design",
     title: "Loft Renovation",
+  },
+  {
+    image: "/images/work-05.png",
+    hint: "residential complex",
+    title: "Residential Complex",
+  },
+  {
+    image: "/images/work-06.png",
+    hint: "industrial facility",
+    title: "Industrial Facility",
+  },
+  // Add more placeholders if needed
+  {
+    image: "https://placehold.co/600x400.png?text=More+Coming+Soon",
+    hint: "placeholder",
+    title: "More Coming Soon 1",
   },
 ];
 
