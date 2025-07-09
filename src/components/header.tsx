@@ -56,7 +56,7 @@ export function Header() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <div className={isScrolled ? 'text-foreground' : 'text-white'}>
-          <Logo />
+          <Logo dark={isScrolled} />
         </div>
         <nav className={`hidden items-center gap-6 md:flex ${isScrolled ? 'text-foreground' : 'text-white'}`}>
           {navContent}
