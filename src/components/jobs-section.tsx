@@ -15,17 +15,17 @@ export function JobsSection() {
         </div>
         <div className="mx-auto mt-12 max-w-3xl space-y-6 text-center">
           <p className="text-xl font-semibold text-foreground">
-            Uz doto brīdi nav brīvas vakances.
+            At the moment, there are no available vacancies.
           </p>
           <div className="space-y-4 text-muted-foreground">
             <p>
-              Mūsu kompānija atlasa darbiniekus konkursa kārtībā.
+              Our company selects employees through a competitive selection process.
             </p>
             <p>
-              Jūsu CV piedalīsies tuvākajā atlasē uz norādīto amatu.
+              Your CV will be considered in the upcoming selection for the specified position.
             </p>
             <p>
-              Kompānija TGF Build garantē Jūsu datu neizpaušanu trešajām personām.
+              TGF Build guarantees that your data will not be disclosed to third parties.
             </p>
           </div>
         </div>

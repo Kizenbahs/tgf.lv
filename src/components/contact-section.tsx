@@ -9,9 +9,9 @@ export function ContactSection() {
     <section className="w-full py-12 md:py-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <Badge variant="default">Contact Us</Badge>
+          <Badge variant="default">Contact us</Badge>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Get in Touch
+            Get in touch
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Have a project in mind or just want to say hello? We&apos;d love to hear from you!
@@ -21,14 +21,14 @@ export function ContactSection() {
           <div className="space-y-6 text-muted-foreground">
             <div>
               <h3 className="text-xl font-bold text-foreground">Address</h3>
-              <p>Krišjāņa Barona Street 136e, Riga, LV-1012</p>
+              <p>Krišjāņa Barona street 136e, Riga, LV-1012</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-foreground">General Inquiries</h3>
+              <h3 className="text-xl font-bold text-foreground">General inquiries</h3>
               <p>E-pasts: info@tgf.lv</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-foreground">Our Team</h3>
+              <h3 className="text-xl font-bold text-foreground">Our team</h3>
               <div className="mt-2 space-y-4">
                 <div>
                   <p className="font-semibold text-foreground">Filips Pērkons</p>
@@ -48,17 +48,16 @@ export function ContactSection() {
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-foreground">Company Details</h3>
+              <h3 className="text-xl font-bold text-foreground">Company details</h3>
               <p>Registration No. – LV40103906156</p>
-              <p>Physical address – Krišjāņa Barona 136E, LV-1012, Riga</p>
-              <p>Legal address – Biķernieku Street 29-19, LV-1039, Riga</p>
+              <p>Physical address – Krišjāņa Barona street 136E, LV-1012, Riga</p>
+              <p>Legal address – Biķernieku street 29-19, LV-1039, Riga</p>
               <p>Bank: Luminor Bank AS Latvian Branch, RIKOLV2X</p>
               <p>Account: LV37RIKO0002930203957</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-foreground">Working Hours</h3>
+              <h3 className="text-xl font-bold text-foreground">Working hours</h3>
               <p>Mon. – Fri. 9:00 – 18:00</p>
-              <p>Emergency service 24/7: +371 29 328 337</p>
             </div>
           </div>
           <div className="rounded-lg bg-secondary p-8 shadow-lg">

@@ -30,7 +30,7 @@ export function ServicesSection({ showMoreLink = false }: { showMoreLink?: boole
           <Badge variant="default">Our Services</Badge>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">What We Offer</h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            We provide a wide range of construction services to meet the diverse needs of our clients.
+          You can order a free professional advice.
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-5xl items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 lg:max-w-none">
@@ -46,8 +46,8 @@ export function ServicesSection({ showMoreLink = false }: { showMoreLink?: boole
         </div>
         {showMoreLink && (
           <div className="mt-12 flex justify-center">
-            <Button asChild size="lg" variant="outline">
-              <Link href="/services">Look more</Link>
+            <Button asChild size="lg" className="bg-gray-300 text-gray-700 hover:bg-yellow-400 hover:text-gray-900 transition-colors duration-300">
+              <Link href="/services">FIND MORE</Link>
             </Button>
           </div>
         )}

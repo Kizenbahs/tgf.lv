@@ -9,11 +9,10 @@ export function HeroSection() {
   return (
     <section className="relative -mt-16 h-[70vh] min-h-[500px] w-full md:h-screen">
       <Image
-        src="https://placehold.co/1920x1080.png"
-        alt="Construction site background"
+        src="/images/electric-installation-hero-bg.webp"
+        alt="Electric installation background"
         fill
         className="object-cover brightness-50"
-        data-ai-hint="construction architecture"
         priority
       />
       <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
@@ -24,7 +23,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Building Your Vision
+            Powering Projects with Expert Electric Installation for 10 Years
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -32,7 +31,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             className="mx-auto mt-4 max-w-[700px] text-lg text-gray-200 md:text-xl"
           >
-            From concept to creation, TGF Build delivers excellence and precision in every project.
+            From concept to creation, TGF Build delivers excellence — and it’s why our customers recommend us to friends and family.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -41,7 +40,7 @@ export function HeroSection() {
             className="mt-8"
           >
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
-              <Link href="/works">Explore Our Work</Link>
+              <Link href="/services">EXPLORE SERVICES</Link>
             </Button>
           </motion.div>
         </div>
