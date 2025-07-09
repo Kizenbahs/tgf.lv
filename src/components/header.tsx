@@ -65,7 +65,7 @@ export function Header() {
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className={isScrolled ? 'text-foreground' : 'text-white'}>
-                <Menu className="h-6 w-6" />
+                <Menu className="h-9 w-9" />
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>
