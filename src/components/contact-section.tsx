@@ -6,16 +6,25 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { ArrowRight } from 'lucide-react';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { useToast } from '@/hooks/use-toast';
 import { Progress } from '@/components/ui/progress';
-import { useState } from 'react';
 
 export function ContactSection() {
   const formRef = useRef<HTMLFormElement>(null);
   const { toast } = useToast();
   const [invalid, setInvalid] = useState<{[key: string]: boolean}>({});
+  const [sending, setSending] = useState(false);
+  const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (progress > 0 && progress < 100) {
+      timer = setTimeout(() => setProgress(progress + 2), 60); // ~3s total
+    }
+    return () => clearTimeout(timer);
+  }, [progress]);
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     if (invalid[e.target.name]) {
@@ -45,6 +54,7 @@ export function ContactSection() {
       });
       return;
     }
+    setSending(true);
     try {
       await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
@@ -52,17 +62,19 @@ export function ContactSection() {
         formRef.current!,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
+      setProgress(1);
       toast({
         title: 'Email sent!',
         description: (
           <div>
             <span>Your message was sent successfully.</span>
-            <Progress value={100} className="mt-2 h-1 bg-green-500" style={{ transition: 'width 3s linear' }} />
+            <Progress value={progress} className="mt-2 h-1 bg-green-500 transition-all duration-3000" />
           </div>
         ),
         className: 'border-green-500',
         duration: 3000,
       });
+      setTimeout(() => setProgress(0), 3000);
       formRef.current.reset();
     } catch (error) {
       toast({
@@ -71,6 +83,8 @@ export function ContactSection() {
         className: 'border-red-500',
         duration: 3000,
       });
+    } finally {
+      setSending(false);
     }
   };
 
@@ -149,9 +163,18 @@ export function ContactSection() {
                 <Label htmlFor="message">Message</Label>
                 <Textarea id="message" name="message" placeholder="Enter your message" className={`min-h-[150px]${invalid.message ? ' border-red-500' : ''}`} onChange={handleInput} />
               </div>
-              <Button type="submit" size="lg" className="w-full flex items-center justify-center gap-2">
-                SEND
-                <ArrowRight className="h-4 w-4" />
+              <Button type="submit" size="lg" className="w-full flex items-center justify-center gap-2" disabled={sending}>
+                {sending ? (
+                  <span className="flex items-center gap-2">
+                    Sending
+                    <span className="animate-pulse">...</span>
+                  </span>
+                ) : (
+                  <>
+                    SEND
+                    <ArrowRight className="h-4 w-4" />
+                  </>
+                )}
               </Button>
             </form>
           </div>
