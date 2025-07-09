@@ -13,11 +13,11 @@ export function CtaSection() {
             Ready to Start Your Next Project?
           </h2>
           <p className="text-muted-foreground md:text-xl">
-            Let's build something amazing together. Contact us for a free consultation and quote.
+            Let's build something amazing together. Contact us for a free consultation.
           </p>
           <Button size="lg" asChild>
             <Link href="/contact" className="flex items-center gap-2">
-              Get a Quote
+              CONTACT US
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
