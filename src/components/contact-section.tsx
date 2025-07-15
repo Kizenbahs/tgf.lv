@@ -94,24 +94,24 @@ export function ContactSection() {
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <Badge variant="default">Contact us</Badge>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-            Get in touch
+            Sazinies Ar Mums
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Have a project in mind or just want to say hello? We&apos;d love to hear from you!
+            Ir ideja projektam vai jautājums? Sazinies ar mums – priecāsimies par Tavu ziņu!
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-12 md:grid-cols-2">
           <div className="space-y-6 text-muted-foreground">
             <div>
-              <h3 className="text-xl font-bold text-foreground">Address</h3>
-              <p>Krišjāņa Barona street 136e, Riga, LV-1012</p>
+              <h3 className="text-xl font-bold text-foreground">Adrese</h3>
+              <p>Krišjāņa Barona iela 136e, Riga, LV-1012</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-foreground">General inquiries</h3>
+              <h3 className="text-xl font-bold text-foreground">Vispārējie jautājumi</h3>
               <p>E-pasts: info@tgf.lv</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-foreground">Our team</h3>
+              <h3 className="text-xl font-bold text-foreground">Mūsu komanda</h3>
               <div className="mt-2 space-y-4">
                 <div>
                   <p className="font-semibold text-foreground">Filips Pērkons</p>
@@ -124,54 +124,59 @@ export function ContactSection() {
                   <p>E: eduards@tgf.lv</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">Ruslans</p>
+                  <p className="font-semibold text-foreground">Ruslans Bikmetovs</p>
                   <p>T: 22 176 883</p>
                   <p>E: ruslans@tgf.lv</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Sergejs Kabanovs</p>
+                  <p>T: 26 484 424</p>
+                  <p>E: sergejs@tgf.lv</p>
                 </div>
               </div>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-foreground">Company details</h3>
-              <p>Registration No. – LV40103906156</p>
-              <p>Physical address – Krišjāņa Barona street 136E, LV-1012, Riga</p>
-              <p>Legal address – Biķernieku street 29-19, LV-1039, Riga</p>
-              <p>Bank: Luminor Bank AS Latvian Branch, RIKOLV2X</p>
-              <p>Account: LV37RIKO0002930203957</p>
+              <h3 className="text-xl font-bold text-foreground">Uzņēmuma dati</h3>
+              <p>Reģistrācijas Nr. – LV40103906156</p>
+              <p>Fiziskā adrese – Krišjāņa Barona iela 136E, LV-1012, Riga</p>
+              <p>Juridiskā adrese – Biķernieku iela 29-19, LV-1039, Riga</p>
+              <p>Bankas kods: Luminor Bank AS Latvian Branch, RIKOLV2X</p>
+              <p>Konts: LV37RIKO0002930203957</p>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-foreground">Working hours</h3>
-              <p>Mon. – Fri. 9:00 – 18:00</p>
+              <h3 className="text-xl font-bold text-foreground">Darba laiks</h3>
+              <p>Pirmdiena – Piektdiena 9:00 – 18:00</p>
             </div>
           </div>
           <div className="rounded-lg bg-secondary p-8 shadow-lg">
             <form ref={formRef} className="grid gap-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="name">Name</Label>
-                  <Input id="name" name="name" placeholder="Enter your name" onChange={handleInput} className={invalid.name ? 'border-red-500' : ''} />
+                  <Label htmlFor="name">Vārds</Label>
+                  <Input id="name" name="name" placeholder="Ievadiet savu vārdu" onChange={handleInput} className={invalid.name ? 'border-red-500' : ''} />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="email">Email</Label>
-                  <Input id="email" name="email" type="email" placeholder="Enter your email" onChange={handleInput} className={invalid.email ? 'border-red-500' : ''} />
+                  <Label htmlFor="email">E-pasts</Label>
+                  <Input id="email" name="email" type="email" placeholder="Ievadiet savu e-pastu" onChange={handleInput} className={invalid.email ? 'border-red-500' : ''} />
                 </div>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" name="subject" placeholder="Have something to say?" onChange={handleInput} className={invalid.subject ? 'border-red-500' : ''} />
+                <Label htmlFor="subject">Temats</Label>
+                <Input id="subject" name="subject" placeholder="Kāds jautājums?" onChange={handleInput} className={invalid.subject ? 'border-red-500' : ''} />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
-                <Textarea id="message" name="message" placeholder="Enter your message" className={`min-h-[150px]${invalid.message ? ' border-red-500' : ''}`} onChange={handleInput} />
+                <Label htmlFor="message">Ziņa</Label>
+                <Textarea id="message" name="message" placeholder="Ievadiet savu ziņu" className={`min-h-[150px]${invalid.message ? ' border-red-500' : ''}`} onChange={handleInput} />
               </div>
               <Button type="submit" size="lg" className="w-full flex items-center justify-center gap-2" disabled={sending}>
                 {sending ? (
                   <span className="flex items-center gap-2">
-                    Sending
+                    Sūta
                     <span className="animate-pulse">...</span>
                   </span>
                 ) : (
                   <>
-                    SEND
+                    SŪTĪT
                     <ArrowRight className="h-4 w-4" />
                   </>
                 )}
