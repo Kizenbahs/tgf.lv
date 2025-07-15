@@ -6,6 +6,7 @@ import { Menu } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import { LanguageToggle } from '@/components/language-toggle';
 
 export function Header() {
   const pathname = usePathname();
@@ -60,6 +61,7 @@ export function Header() {
         </div>
         <nav className={`hidden items-center gap-6 md:flex ${isScrolled ? 'text-foreground' : 'text-white'}`}>
           {navContent}
+          <LanguageToggle />
         </nav>
         <div className="md:hidden">
           <Sheet>
@@ -72,6 +74,7 @@ export function Header() {
             <SheetContent side="right">
               <nav className="mt-8 flex flex-col items-start gap-6 text-foreground">
                 {navContent}
+                <LanguageToggle />
               </nav>
             </SheetContent>
           </Sheet>
