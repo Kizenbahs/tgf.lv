@@ -48,7 +48,7 @@ export function ContactSection() {
     setInvalid(newInvalid);
     if (Object.keys(newInvalid).length > 0) {
       toast({
-        title: 'Please fill in all fields.',
+        title: 'Lūdzu, aizpildiet visus laukus.',
         className: 'border-red-500',
         duration: 3000,
       });
@@ -56,18 +56,20 @@ export function ContactSection() {
     }
     setSending(true);
     try {
+      // Use Vercel environment variables for EmailJS
       await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
         formRef.current!,
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
       );
+      
       setProgress(1);
       toast({
-        title: 'Email sent!',
+        title: 'Ziņa nosūtīta!',
         description: (
           <div>
-            <span>Your message was sent successfully.</span>
+            <span>Jūsu ziņa tika nosūtīta veiksmīgi. Mēs sazināsimies ar jums drīzumā.</span>
             <Progress value={progress} className="mt-2 h-1 bg-green-500 transition-all duration-3000" />
           </div>
         ),
@@ -78,8 +80,8 @@ export function ContactSection() {
       formRef.current.reset();
     } catch (error) {
       toast({
-        title: 'Error',
-        description: 'Failed to send message. Please try again later.',
+        title: 'Kļūda',
+        description: 'Neizdevās nosūtīt ziņu. Lūdzu, mēģiniet vēlreiz vēlāk.',
         className: 'border-red-500',
         duration: 3000,
       });
