@@ -46,10 +46,10 @@ export function OurWorksSection() {
     <section id="works" className="w-full py-12 md:py-16">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-          <Badge variant="default">Our Works</Badge>
-          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Featured Projects</h2>
+          <Badge variant="default">Mūsu Darbi</Badge>
+          <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Pēdējie Darbi</h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Explore a selection of our finest work, showcasing our commitment to quality and innovation.
+            Iepazīstieties ar mūsu darbiem, kas atspoguļo mūsu apņemšanos nodrošināt kvalitāti.
           </p>
         </div>
         <div className="mx-auto mt-12 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-8">
