@@ -15,6 +15,22 @@ export const metadata: Metadata = {
   description: 'Leading company in electrical installation and general construction. We offer full-cycle services from project design to commissioning.',
   keywords: ['electrical installation', 'construction', 'building', 'renovation', 'general contractor', 'Riga', 'Latvia', 'TGF Build'],
   authors: [{ name: 'TGF Build' }],
+  creator: 'TGF Build',
+  publisher: 'TGF Build',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/icon.png', type: 'image/png', sizes: '32x32' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'TGF Build | Electrical Installation and Construction',
     description: 'Leading company in electrical installation and general construction.',
