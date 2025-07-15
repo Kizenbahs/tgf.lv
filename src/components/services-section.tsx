@@ -44,8 +44,8 @@ export function ServicesSection({ showMoreLink = false }: { showMoreLink?: boole
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <Badge variant="default">Mūsu Pakalpojumi</Badge>
           <h2 className="font-headline text-3xl font-bold tracking-tighter sm:text-5xl">Ko Mēs Piedāvājam</h2>
-          <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-          Iespēja saņemt bezmaksas ekspertu padomu
+                    <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            Iespēja saņemt bezmaksas ekspertu padomu.
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-5xl items-stretch gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 lg:max-w-none">
