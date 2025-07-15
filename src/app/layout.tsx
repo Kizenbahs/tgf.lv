@@ -9,11 +9,11 @@ const font = DM_Sans({ subsets: ["latin"], variable: "--font-body" });
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.tgf-build.lv'),
   title: {
-    default: 'TGF Build | Electrical Installation and Construction',
+    default: 'TGF Build | Elektromontāžas Darbi. Projektēšana. Būvniecība. Elektromontāža.',
     template: `%s | TGF Build`,
   },
-  description: 'Leading company in electrical installation and general construction. We offer full-cycle services from project design to commissioning.',
-  keywords: ['electrical installation', 'construction', 'building', 'renovation', 'general contractor', 'Riga', 'Latvia', 'TGF Build'],
+  description: 'Elektromontāža un Vispārējā Būvniecība. Mēs piedāvājam pilnu ciklu pakalpojumus no projekta dizaina līdz komisijas pārbaudei.',
+  keywords: ['elektromontāža', 'būvniecība', 'būvniecības uzņēmums', 'būvniecības uzņēmums Riga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums
   authors: [{ name: 'TGF Build' }],
   creator: 'TGF Build',
   publisher: 'TGF Build',
@@ -39,26 +39,26 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   openGraph: {
-    title: 'TGF Build | Electrical Installation and Construction',
-    description: 'Leading company in electrical installation and general construction.',
+    title: 'TGF Build | Elektromontāža un Vispārējā Būvniecība',
+    description: 'Elektromontāža un Vispārējā Būvniecība. Mēs piedāvājam pilnu ciklu pakalpojumus no projekta dizaina līdz komisijas pārbaudei.',
     url: 'https://www.tgf-build.lv',
     siteName: 'TGF Build',
     images: [
       {
-        url: 'https://placehold.co/1200x630.png',
+        url: '/images/social.png',
         width: 1200,
         height: 630,
         alt: 'TGF Build Construction Site',
       },
     ],
-    locale: 'en_US',
+    locale: 'lv_LV',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TGF Build | Electrical Installation and Construction',
-    description: 'Leading company in electrical installation and general construction.',
-    images: ['https://placehold.co/1200x630.png'],
+    title: 'TGF Build | Elektromontāža un Vispārējā Būvniecība',
+    description: 'Elektromontāža un Vispārējā Būvniecība. Mēs piedāvājam pilnu ciklu pakalpojumus no projekta dizaina līdz komisijas pārbaudei.',
+    images: ['/images/social.png'],
   },
   robots: {
     index: true,
@@ -92,7 +92,7 @@ export default function RootLayout({
     email: 'info@tgf.lv',
     telephone: '+371-29328337',
     url: 'https://www.tgf-build.lv',
-    logo: 'https://www.tgf-build.lv/logo.svg',
+    logo: '/images/social.png',
     openingHours: 'Mo-Fr 09:00-18:00',
     contactPoint: [
       {
