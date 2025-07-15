@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: `%s | TGF Build`,
   },
   description: 'Elektromontāža un Vispārējā Būvniecība. Mēs piedāvājam pilnu ciklu pakalpojumus no projekta dizaina līdz komisijas pārbaudei.',
-  keywords: ['elektromontāža', 'būvniecība', 'būvniecības uzņēmums', 'būvniecības uzņēmums Riga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'būvniecības uzņēmums 
+  keywords: ['elektromontāža', 'būvniecība', 'būvniecības uzņēmums', 'būvniecības uzņēmums Rīga', 'būvniecības uzņēmums Latvija', 'elektromontāžas darbi', 'projektēšana', 'būvniecības pakalpojumi'],
   authors: [{ name: 'TGF Build' }],
   creator: 'TGF Build',
   publisher: 'TGF Build',
