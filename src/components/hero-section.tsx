@@ -24,7 +24,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Powering Projects with Expert Electric Installation for 10 Years
+            Uzņēmums ar 10 gadu pieredzi elektromontāžas jomā
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
             className="mx-auto mt-4 max-w-[700px] text-lg text-gray-200 md:text-xl"
           >
-            From concept to creation, TGF Build delivers excellence — and it’s why our customers recommend us to friends.
+            TGF Build īsteno projektus no idejas līdz gatavam risinājumam, nodrošinot augstāko kvalitāti – tieši tāpēc klienti mūs iesaka tālāk.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -42,7 +42,7 @@ export function HeroSection() {
           >
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90" asChild>
               <Link href="/services" className="flex items-center gap-2">
-                EXPLORE SERVICES
+                APSKATĪT PAKALPOJUMUS
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>

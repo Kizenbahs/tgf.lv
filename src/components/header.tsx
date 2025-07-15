@@ -28,11 +28,11 @@ export function Header() {
   }, [isHomePage]);
 
   const navLinks = [
-    { href: '/services', label: 'Services' },
-    { href: '/works', label: 'Our Works' },
-    { href: '/about', label: 'About Us' },
-    { href: '/jobs', label: 'Jobs' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/services', label: 'PAKALPOJUMI' },
+    { href: '/works', label: 'MŪSU DARBI' },
+    { href: '/about', label: 'PAR MUMS' },
+    { href: '/jobs', label: 'VAKANCES' },
+    { href: '/contact', label: 'KONTAKTI' },
   ];
 
   const navContent = (
