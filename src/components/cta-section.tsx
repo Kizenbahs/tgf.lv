@@ -17,7 +17,7 @@ export function CtaSection() {
           </p>
           <Button size="lg" asChild>
             <Link href="/contact" className="flex items-center gap-2">
-              SAZINĀTIES AR MUMS
+              SAZINIES AR MUMS
               <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
