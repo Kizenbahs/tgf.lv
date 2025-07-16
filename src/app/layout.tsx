@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { DM_Sans } from "next/font/google";
+import Script from 'next/script';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
@@ -118,6 +119,20 @@ export default function RootLayout({
 
   return (
     <html lang="lv" className="!scroll-smooth">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-PLKTHBE5NP"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PLKTHBE5NP');
+          `}
+        </Script>
+      </head>
       <body className={cn(
         "font-body antialiased",
         font.variable
