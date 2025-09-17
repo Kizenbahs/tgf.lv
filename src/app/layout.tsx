@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { DM_Sans } from "next/font/google";
 import Script from 'next/script';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from '@vercel/analytics/react';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
@@ -145,6 +146,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
