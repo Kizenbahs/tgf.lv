@@ -28,7 +28,6 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/images/favicon.ico', sizes: 'any' },
-      { url: '/images/favicon.svg', type: 'image/svg+xml' },
     ],
   },
   manifest: '/site.webmanifest',
